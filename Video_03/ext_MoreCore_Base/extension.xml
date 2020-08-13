@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+
+<!-- 
+  Please see the license.html file included with this distribution for 
+  attribution and copyright information.
+-->
+
+<root version="3.0" release="1" logo="logo.png">
+	
+	<!-- File Attributes -->
+	<properties>
+		<name>Name of Ext</name>
+		<description>
+			<text>Info about ext.</text>
+			<version>0.0.1</version>
+			<author>Frostbyte000JM</author>
+		</description>
+		
+		<!-- Which RuleSets? -->
+		<ruleset>
+			<name>CoreRPG</name>
+		</ruleset>
+		<ruleset>
+			<name>MoreCore</name>
+		</ruleset>
+		
+	</properties>
+	
+	<!--Announcement-->
+	<announcement text="Name of Ext | v: 0.0.1 | by: Frostbyte" icon="Frostbyte" font="emotefont" />
+		
+	<base>
+		<!-- My Signature -->
+		<includefile source="graphics/graphics_icons.xml" />
+		
+		
+		<!-- Include XML Files -->
+		<includefile source="strings/strings_extension.xml" />
+		
+		
+		<!-- Include LUA Files
+		<script name="SomeLua" file="scripts/SomeLua.lua" />
+		-->
+
+	</base>
+
+</root>
