@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+
+<!-- 
+  Please see the license.html file included with this distribution for 
+  attribution and copyright information.
+-->
+
+<root>
+	<windowclass name="ps_xp" merge="join">
+		<sheetdata>
+
+			<genericcontrol name="img_quest_coverup">
+				<icon>img_coverup</icon>
+				<anchored to="quests" position="above" offset="0,20" height="22"/>
+			</genericcontrol>
+
+			<label_ps name="lbl_XP_GameSessions">
+				<anchored to="quests" position="above" offset="0,20" />
+				<static textres="ps_label_gamesessions" />
+				<center />
+			</label_ps>
+
+			<button_text name="btn_Award">
+				<anchored to="quests" position="aboveleft" offset="10,15" width="60" height="20" />
+				<state textres="ps_label_award" />
+				<script name="award_exp" file="ps/scripts/award_exp.lua"/>
+			</button_text>
+
+		</sheetdata>
+	</windowclass>
+</root>
