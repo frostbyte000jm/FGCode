@@ -1,0 +1,61 @@
+Runtime Notice: Reloading ruleset
+Runtime Notice: s'aMajor: ' | { s'CoreRPG' = #4, s'MoreCore' = #1 } | s' aMinor: ' | { s'CoreRPG' = #0, s'MoreCore' = #58 }
+Runtime Notice: s'onInit: registerResultHandler'
+Runtime Notice: s'YoMan fights on.'
+Runtime Notice: s'ZedDude fights on.'
+Runtime Notice: s'*** performAction() ***'
+Runtime Notice: s'draginfo: ' | nil | s' rActor: ' | { s'sType' = s'pc', s'sCreatureNode' = s'charsheet.id-00001', s'sCTNode' = s'combattracker.list.id-00001', s'sName' = s'Bob the Dob' } | s' sParams:' | s'1h0 Roll'
+Runtime Notice: s'onInit() aContainer: ' | { s'bCritGlitch' = bFALSE, s'nDiceTotalValue' = #0, s'bGlitch' = bFALSE, s'nGlitchValue' = #1, s'nExplodeValue' = #0 }
+Runtime Notice: s'sStackDesc: ' | s''
+Runtime Notice: s'objProp: ' | {  }
+Runtime Notice: s'aModStackDescriptions: ' | {  } | s' nStackMod: ' | #0
+Runtime Notice: s'nodeActorEffects: ' | { s'source_name' = databasenode = { combattracker.list.id-00001.effects.id-00002.source_name }, s'init' = databasenode = { combattracker.list.id-00001.effects.id-00002.init }, s'isactive' = databasenode = { combattracker.list.id-00001.effects.id-00002.isactive }, s'isgmonly' = databasenode = { combattracker.list.id-00001.effects.id-00002.isgmonly }, s'label' = databasenode = { combattracker.list.id-00001.effects.id-00002.label }, s'duration' = databasenode = { combattracker.list.id-00001.effects.id-00002.duration } }
+Runtime Notice: s'sLabel: ' | s'glitch:2' | s'nValue: ' | s'2'
+Runtime Notice: s'nodeActorEffects: ' | { s'source_name' = databasenode = { combattracker.list.id-00001.effects.id-00001.source_name }, s'init' = databasenode = { combattracker.list.id-00001.effects.id-00001.init }, s'isactive' = databasenode = { combattracker.list.id-00001.effects.id-00001.isactive }, s'isgmonly' = databasenode = { combattracker.list.id-00001.effects.id-00001.isgmonly }, s'label' = databasenode = { combattracker.list.id-00001.effects.id-00001.label }, s'duration' = databasenode = { combattracker.list.id-00001.effects.id-00001.duration } }
+Runtime Notice: s'sLabel: ' | s'explode:6' | s'nValue: ' | s'6'
+Runtime Notice: s'End performAction() aRoll: ' | { s'aDice' = { #1 = s'd6' }, s'nMod' = #0, s'sType' = s'sr6w', s'sDiceSides' = s'd6', s'sDesc' = s'' }
+Runtime Notice: s'*** onLanded(rSource, rTarget, rRoll) ***'
+Runtime Notice: s'rSource: ' | { s'sType' = s'pc', s'sCreatureNode' = s'charsheet.id-00001', s'sCTNode' = s'combattracker.list.id-00001', s'sName' = s'Bob the Dob' }
+Runtime Notice: s'rTarget: ' | nil
+Runtime Notice: s'rRoll: ' | { s'aDice' = { #1 = { s'result' = #3, s'type' = s'd6' } }, s'nMod' = #0, s'sType' = s'sr6w', s'bSecret' = bFALSE, s'sDiceSides' = s'd6', s'sDesc' = s'' }
+Runtime Notice: s'Final rRoll: ' | { s'aDice' = { #1 = { s'result' = #3, s'type' = s'd6' } }, s'nMod' = #0, s'sType' = s'sr6w', s'bSecret' = bFALSE, s'sDiceSides' = s'd6', s'sDesc' = s'' }
+Runtime Notice: s'*** getDiceResults(rRoll) ***'
+Runtime Notice: s'rRoll: ' | { s'aDice' = { #1 = { s'result' = #3, s'type' = s'd6' } }, s'nMod' = #0, s'sType' = s'sr6w', s'bSecret' = bFALSE, s'sDiceSides' = s'd6', s'sDesc' = s'' }
+Runtime Notice: s'aDice: ' | { s'result' = #3, s'type' = s'd6' }
+Runtime Notice: s'nResult: ' | #3 | s'sType: ' | s'd6'
+Runtime Notice: s'aContainer.nMyTotal: ' | #0
+Runtime Notice: s'Where is the problem: nCrits: ' | #0 | s'nDiceCount: ' | #1
+Runtime Notice: s'End getDiceResults() aContainer: ' | { s'bCritGlitch' = bFALSE, s'nDiceTotalValue' = #0, s'bGlitch' = bFALSE, s'nGlitchValue' = #2, s'nExplodeValue' = #6 }
+Runtime Notice: s'after getDiceResults() rRoll: ' | { s'aDice' = { #1 = { s'result' = #3, s'type' = s'd6' } }, s'nMod' = #0, s'sType' = s'sr6w', s'bSecret' = bFALSE, s'sDiceSides' = s'd6', s'sDesc' = s'' }
+Runtime Notice: { s'aDice' = { #1 = { s'result' = #3, s'type' = s'd6' } }, s'nMod' = #0, s'sType' = s'sr6w', s'bSecret' = bFALSE, s'sDiceSides' = s'd6', s'sDesc' = s'' }
+Runtime Notice: s'*** createChatMessage(rSource, rRoll) ***'
+Runtime Notice: s'aMessage: ' | { s'sender' = s'Bob the Dob', s'text' = s'', s'secret' = bTRUE, s'font' = s'systemfont', s'dicedisplay' = #1, s'diemodifier' = #0, s'dice' = { #1 = { s'result' = #3, s'type' = s'd6' } }, s'icon' = s'portrait_gm_token', s'type' = s'sr6w' }
+Runtime Notice: s'Create Crit Message: ' | { s'bCritGlitch' = bFALSE, s'nDiceTotalValue' = #0, s'bGlitch' = bFALSE, s'nGlitchValue' = #2, s'nExplodeValue' = #6 }
+Runtime Notice: s'*** performAction() ***'
+Runtime Notice: s'draginfo: ' | nil | s' rActor: ' | { s'sType' = s'pc', s'sCreatureNode' = s'charsheet.id-00001', s'sCTNode' = s'combattracker.list.id-00001', s'sName' = s'Bob the Dob' } | s' sParams:' | s'1h0 Roll'
+Runtime Notice: s'onInit() aContainer: ' | { s'bCritGlitch' = bFALSE, s'nDiceTotalValue' = #0, s'bGlitch' = bFALSE, s'nGlitchValue' = #1, s'nExplodeValue' = #0 }
+Runtime Notice: s'sStackDesc: ' | s''
+Runtime Notice: s'objProp: ' | {  }
+Runtime Notice: s'aModStackDescriptions: ' | {  } | s' nStackMod: ' | #0
+Runtime Notice: s'nodeActorEffects: ' | { s'source_name' = databasenode = { combattracker.list.id-00001.effects.id-00002.source_name }, s'init' = databasenode = { combattracker.list.id-00001.effects.id-00002.init }, s'isactive' = databasenode = { combattracker.list.id-00001.effects.id-00002.isactive }, s'isgmonly' = databasenode = { combattracker.list.id-00001.effects.id-00002.isgmonly }, s'label' = databasenode = { combattracker.list.id-00001.effects.id-00002.label }, s'duration' = databasenode = { combattracker.list.id-00001.effects.id-00002.duration } }
+Runtime Notice: s'sLabel: ' | s'glitch:2' | s'nValue: ' | s'2'
+Runtime Notice: s'nodeActorEffects: ' | { s'source_name' = databasenode = { combattracker.list.id-00001.effects.id-00001.source_name }, s'init' = databasenode = { combattracker.list.id-00001.effects.id-00001.init }, s'isactive' = databasenode = { combattracker.list.id-00001.effects.id-00001.isactive }, s'isgmonly' = databasenode = { combattracker.list.id-00001.effects.id-00001.isgmonly }, s'label' = databasenode = { combattracker.list.id-00001.effects.id-00001.label }, s'duration' = databasenode = { combattracker.list.id-00001.effects.id-00001.duration } }
+Runtime Notice: s'sLabel: ' | s'explode:6' | s'nValue: ' | s'6'
+Runtime Notice: s'End performAction() aRoll: ' | { s'aDice' = { #1 = s'd6' }, s'nMod' = #0, s'sType' = s'sr6w', s'sDiceSides' = s'd6', s'sDesc' = s'' }
+Runtime Notice: s'*** onLanded(rSource, rTarget, rRoll) ***'
+Runtime Notice: s'rSource: ' | { s'sType' = s'pc', s'sCreatureNode' = s'charsheet.id-00001', s'sCTNode' = s'combattracker.list.id-00001', s'sName' = s'Bob the Dob' }
+Runtime Notice: s'rTarget: ' | nil
+Runtime Notice: s'rRoll: ' | { s'aDice' = { #1 = { s'result' = #1, s'type' = s'd6' } }, s'nMod' = #0, s'sType' = s'sr6w', s'bSecret' = bFALSE, s'sDiceSides' = s'd6', s'sDesc' = s'' }
+Runtime Notice: s'Final rRoll: ' | { s'aDice' = { #1 = { s'result' = #1, s'type' = s'd6' } }, s'nMod' = #0, s'sType' = s'sr6w', s'bSecret' = bFALSE, s'sDiceSides' = s'd6', s'sDesc' = s'' }
+Runtime Notice: s'*** getDiceResults(rRoll) ***'
+Runtime Notice: s'rRoll: ' | { s'aDice' = { #1 = { s'result' = #1, s'type' = s'd6' } }, s'nMod' = #0, s'sType' = s'sr6w', s'bSecret' = bFALSE, s'sDiceSides' = s'd6', s'sDesc' = s'' }
+Runtime Notice: s'aDice: ' | { s'result' = #1, s'type' = s'd6' }
+Runtime Notice: s'nResult: ' | #1 | s'sType: ' | s'd6'
+Runtime Notice: s'aContainer.nMyTotal: ' | #0
+Runtime Notice: s'Where is the problem: nCrits: ' | #0 | s'nDiceCount: ' | #1
+Runtime Notice: s'End getDiceResults() aContainer: ' | { s'bCritGlitch' = bFALSE, s'nDiceTotalValue' = #0, s'bGlitch' = bFALSE, s'nGlitchValue' = #2, s'nExplodeValue' = #6 }
+Runtime Notice: s'after getDiceResults() rRoll: ' | { s'aDice' = { #1 = { s'result' = #1, s'type' = s'd6' } }, s'nMod' = #0, s'sType' = s'sr6w', s'bSecret' = bFALSE, s'sDiceSides' = s'd6', s'sDesc' = s'' }
+Runtime Notice: { s'aDice' = { #1 = { s'result' = #1, s'type' = s'd6' } }, s'nMod' = #0, s'sType' = s'sr6w', s'bSecret' = bFALSE, s'sDiceSides' = s'd6', s'sDesc' = s'' }
+Runtime Notice: s'*** createChatMessage(rSource, rRoll) ***'
+Runtime Notice: s'aMessage: ' | { s'sender' = s'Bob the Dob', s'text' = s'', s'secret' = bTRUE, s'font' = s'systemfont', s'dicedisplay' = #1, s'diemodifier' = #0, s'dice' = { #1 = { s'result' = #1, s'type' = s'd6' } }, s'icon' = s'portrait_gm_token', s'type' = s'sr6w' }
+Runtime Notice: s'Create Crit Message: ' | { s'bCritGlitch' = bFALSE, s'nDiceTotalValue' = #0, s'bGlitch' = bFALSE, s'nGlitchValue' = #2, s'nExplodeValue' = #6 }

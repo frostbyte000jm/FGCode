@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+
+<!-- 
+  Please see the license.html file included with this distribution for 
+  attribution and copyright information.
+-->
+
+<root>
+
+	<template name="button_rolls_type" merge="replace">
+		<button_iconcycler>
+			<anchored width="24" height="24" />
+			<parameters>
+				<icons>rolls|modifier|table|chat|dbdamage|damage|heal|attack|saving|spell|cleric|wizard|druid|bard|skull|pent|fireball|flame|dice_test|sr6w|dice_mod</icons> <!--dice_mod_update  Add new dice command into here and then copy these 3 lines below-->
+				<values>rolls|modifier|table|chat|dbdamage|damage|heal|attack|saving|spell|cleric|wizard|druid|bard|skull|pent|fireball|flame|dice_test|sr6w|dice_mod</values>
+				<tooltips>Rolls|Modifier|Table|Chat|DbDamage|Damage|Heal|Attack|Saving|Spell|Cleric|Wizard|Druid|Bard|Skull|Pentagram|Fireball|Flame|Dice_test|SR6W|Dice_mod</tooltips>
+				<defaulttooltip>Roll Type</defaulttooltip>
+				<defaulticon>rolls</defaulticon>
+			</parameters>
+			<readonly />
+		</button_iconcycler>
+	</template>
+	<template name="button_rolls" merge="replace">
+		<button_vari_icon>
+			<anchored width="24" height="24" />
+			<parameters>
+				<icons>rolls|modifier|table|chat|dbdamage|damage|heal|attack|saving|spell|cleric|wizard|druid|bard|skull|pent|fireball|flame|dice_test|sr6w|dice_mod</icons> <!--dice_mod_update  Add new dice command into here and then copy these 3 lines below-->
+				<values>rolls|modifier|table|chat|dbdamage|damage|heal|attack|saving|spell|cleric|wizard|druid|bard|skull|pent|fireball|flame|dice_test|sr6w|dice_mod</values>
+				<tooltips>Rolls|Modifier|Table|Chat|DbDamage|Damage|Heal|Attack|Saving|Spell|Cleric|Wizard|Druid|Bard|Skull|Pentagram|Fireball|Flame|Dice_test|SR6W|Dice_mod</tooltips>
+				<defaulttooltip>Roll Type</defaulttooltip>
+				<defaulticon>rolls</defaulticon>
+			</parameters>
+			<readonly />
+		</button_vari_icon>
+	</template>
+</root>
