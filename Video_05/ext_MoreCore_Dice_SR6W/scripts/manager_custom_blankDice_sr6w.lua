@@ -52,6 +52,13 @@ function performAction(draginfo, rActor, sParams)
     Debug.console("*** performAction() ***");
     Debug.console("draginfo: ",draginfo, " rActor: ", rActor, " sParams:", sParams);
 
+    -- Error Check / Help Message
+    if(sParams == "" or sParams == "help") then
+        Debug.console("Error Check: ", sParams);
+        createHelpMessage();
+        return;
+    end
+
     -- This is to fix a bug where someone spams the die rolling.
     if aContainer.bRollin then
         return;
@@ -83,10 +90,13 @@ function performAction(draginfo, rActor, sParams)
     --- NOTE: the only array/table that can exist in aRoll is aDice.
     --- All other data must be string, boolean, or number
 
+
+
     --- Choose a Dice parser from Tool Box
     local sDiceNum, sAutoHits = string.match(sParams, "(%d+)h(%d+)");
     aContainer.nDiceTotalValue = tonumber(sAutoHits);
     local nDiceNum = tonumber(sDiceNum);
+    Debug.console("nDiceNum: ",nDiceNum);
     for i = 1, nDiceNum do
         table.insert(aRoll.aDice,aRoll.sDiceSides);
     end
@@ -134,7 +144,7 @@ function performAction(draginfo, rActor, sParams)
             local _,sValue = string.match(sLabel,"[:](%s*)(%d+)");
             Debug.console("sLabel: ",sLabel,"nValue: ",sValue);
             aContainer.nExplodeValue = tonumber(sValue);
-            ---DB.deleteNode(nodeActorEffects);
+            DB.deleteNode(nodeActorEffects);
         elseif string.match(sLabel,"glitch:") then
             local _,sValue = string.match(sLabel,"[:](%s*)(%d+)");
             Debug.console("sLabel: ",sLabel,"nValue: ",sValue);
@@ -145,12 +155,10 @@ function performAction(draginfo, rActor, sParams)
     end
 
 
-    -- Error Check / Help Message
-    if(sParams == "" or sParams == "help") then
-        createHelpMessage();
-    end
+
     -- Verify the data is correct
     Debug.console("End performAction() aRoll: ", aRoll);
+    Debug.console("End performAction() aContainer: ", aContainer);
     ActionsManager.performAction(draginfo, rActor, aRoll);
 end
 
@@ -159,6 +167,7 @@ function onLanded(rSource, rTarget, rRoll)
     Debug.console("rSource: ",rSource);
     Debug.console("rTarget: ",rTarget);
     Debug.console("rRoll: ",rRoll);
+    Debug.console("aContainer: ",aContainer);
     --- Any special functionality (like Explode) goes here.
     --- This happens before dice results are counted.
 
@@ -175,11 +184,15 @@ function onLanded(rSource, rTarget, rRoll)
         -- Load current roll into Prior roll and if any explode add dice to aRoll.
         for _, aDice in pairs(rRoll.aDice) do
             local nResult = aDice.result;
+            if nResult == nil then
+                break;
+            end
 
             -- load last roll into aPriorRoll
             table.insert(aPriorRoll.aDice, aDice);
 
             -- If condition met, add red dice to aRoll.
+            Debug.console("Error from FG: nResult: ",nResult, " aContainer.nExplodeValue: ",aContainer.nExplodeValue);
             if nResult >= aContainer.nExplodeValue then
                 bDoReRoll = true;
                 table.insert(aRoll.aDice, "d1006"); --- Set proper explode dice here.

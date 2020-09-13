@@ -1,61 +1,135 @@
-Runtime Notice: Reloading ruleset
-Runtime Notice: s'aMajor: ' | { s'CoreRPG' = #4, s'MoreCore' = #1 } | s' aMinor: ' | { s'CoreRPG' = #0, s'MoreCore' = #58 }
-Runtime Notice: s'onInit: registerResultHandler'
-Runtime Notice: s'YoMan fights on.'
-Runtime Notice: s'ZedDude fights on.'
-Runtime Notice: s'*** performAction() ***'
-Runtime Notice: s'draginfo: ' | nil | s' rActor: ' | { s'sType' = s'pc', s'sCreatureNode' = s'charsheet.id-00001', s'sCTNode' = s'combattracker.list.id-00001', s'sName' = s'Bob the Dob' } | s' sParams:' | s'1h0 Roll'
-Runtime Notice: s'onInit() aContainer: ' | { s'bCritGlitch' = bFALSE, s'nDiceTotalValue' = #0, s'bGlitch' = bFALSE, s'nGlitchValue' = #1, s'nExplodeValue' = #0 }
-Runtime Notice: s'sStackDesc: ' | s''
-Runtime Notice: s'objProp: ' | {  }
-Runtime Notice: s'aModStackDescriptions: ' | {  } | s' nStackMod: ' | #0
-Runtime Notice: s'nodeActorEffects: ' | { s'source_name' = databasenode = { combattracker.list.id-00001.effects.id-00002.source_name }, s'init' = databasenode = { combattracker.list.id-00001.effects.id-00002.init }, s'isactive' = databasenode = { combattracker.list.id-00001.effects.id-00002.isactive }, s'isgmonly' = databasenode = { combattracker.list.id-00001.effects.id-00002.isgmonly }, s'label' = databasenode = { combattracker.list.id-00001.effects.id-00002.label }, s'duration' = databasenode = { combattracker.list.id-00001.effects.id-00002.duration } }
-Runtime Notice: s'sLabel: ' | s'glitch:2' | s'nValue: ' | s'2'
-Runtime Notice: s'nodeActorEffects: ' | { s'source_name' = databasenode = { combattracker.list.id-00001.effects.id-00001.source_name }, s'init' = databasenode = { combattracker.list.id-00001.effects.id-00001.init }, s'isactive' = databasenode = { combattracker.list.id-00001.effects.id-00001.isactive }, s'isgmonly' = databasenode = { combattracker.list.id-00001.effects.id-00001.isgmonly }, s'label' = databasenode = { combattracker.list.id-00001.effects.id-00001.label }, s'duration' = databasenode = { combattracker.list.id-00001.effects.id-00001.duration } }
-Runtime Notice: s'sLabel: ' | s'explode:6' | s'nValue: ' | s'6'
-Runtime Notice: s'End performAction() aRoll: ' | { s'aDice' = { #1 = s'd6' }, s'nMod' = #0, s'sType' = s'sr6w', s'sDiceSides' = s'd6', s'sDesc' = s'' }
-Runtime Notice: s'*** onLanded(rSource, rTarget, rRoll) ***'
-Runtime Notice: s'rSource: ' | { s'sType' = s'pc', s'sCreatureNode' = s'charsheet.id-00001', s'sCTNode' = s'combattracker.list.id-00001', s'sName' = s'Bob the Dob' }
-Runtime Notice: s'rTarget: ' | nil
-Runtime Notice: s'rRoll: ' | { s'aDice' = { #1 = { s'result' = #3, s'type' = s'd6' } }, s'nMod' = #0, s'sType' = s'sr6w', s'bSecret' = bFALSE, s'sDiceSides' = s'd6', s'sDesc' = s'' }
-Runtime Notice: s'Final rRoll: ' | { s'aDice' = { #1 = { s'result' = #3, s'type' = s'd6' } }, s'nMod' = #0, s'sType' = s'sr6w', s'bSecret' = bFALSE, s'sDiceSides' = s'd6', s'sDesc' = s'' }
-Runtime Notice: s'*** getDiceResults(rRoll) ***'
-Runtime Notice: s'rRoll: ' | { s'aDice' = { #1 = { s'result' = #3, s'type' = s'd6' } }, s'nMod' = #0, s'sType' = s'sr6w', s'bSecret' = bFALSE, s'sDiceSides' = s'd6', s'sDesc' = s'' }
-Runtime Notice: s'aDice: ' | { s'result' = #3, s'type' = s'd6' }
-Runtime Notice: s'nResult: ' | #3 | s'sType: ' | s'd6'
-Runtime Notice: s'aContainer.nMyTotal: ' | #0
-Runtime Notice: s'Where is the problem: nCrits: ' | #0 | s'nDiceCount: ' | #1
-Runtime Notice: s'End getDiceResults() aContainer: ' | { s'bCritGlitch' = bFALSE, s'nDiceTotalValue' = #0, s'bGlitch' = bFALSE, s'nGlitchValue' = #2, s'nExplodeValue' = #6 }
-Runtime Notice: s'after getDiceResults() rRoll: ' | { s'aDice' = { #1 = { s'result' = #3, s'type' = s'd6' } }, s'nMod' = #0, s'sType' = s'sr6w', s'bSecret' = bFALSE, s'sDiceSides' = s'd6', s'sDesc' = s'' }
-Runtime Notice: { s'aDice' = { #1 = { s'result' = #3, s'type' = s'd6' } }, s'nMod' = #0, s'sType' = s'sr6w', s'bSecret' = bFALSE, s'sDiceSides' = s'd6', s'sDesc' = s'' }
-Runtime Notice: s'*** createChatMessage(rSource, rRoll) ***'
-Runtime Notice: s'aMessage: ' | { s'sender' = s'Bob the Dob', s'text' = s'', s'secret' = bTRUE, s'font' = s'systemfont', s'dicedisplay' = #1, s'diemodifier' = #0, s'dice' = { #1 = { s'result' = #3, s'type' = s'd6' } }, s'icon' = s'portrait_gm_token', s'type' = s'sr6w' }
-Runtime Notice: s'Create Crit Message: ' | { s'bCritGlitch' = bFALSE, s'nDiceTotalValue' = #0, s'bGlitch' = bFALSE, s'nGlitchValue' = #2, s'nExplodeValue' = #6 }
-Runtime Notice: s'*** performAction() ***'
-Runtime Notice: s'draginfo: ' | nil | s' rActor: ' | { s'sType' = s'pc', s'sCreatureNode' = s'charsheet.id-00001', s'sCTNode' = s'combattracker.list.id-00001', s'sName' = s'Bob the Dob' } | s' sParams:' | s'1h0 Roll'
-Runtime Notice: s'onInit() aContainer: ' | { s'bCritGlitch' = bFALSE, s'nDiceTotalValue' = #0, s'bGlitch' = bFALSE, s'nGlitchValue' = #1, s'nExplodeValue' = #0 }
-Runtime Notice: s'sStackDesc: ' | s''
-Runtime Notice: s'objProp: ' | {  }
-Runtime Notice: s'aModStackDescriptions: ' | {  } | s' nStackMod: ' | #0
-Runtime Notice: s'nodeActorEffects: ' | { s'source_name' = databasenode = { combattracker.list.id-00001.effects.id-00002.source_name }, s'init' = databasenode = { combattracker.list.id-00001.effects.id-00002.init }, s'isactive' = databasenode = { combattracker.list.id-00001.effects.id-00002.isactive }, s'isgmonly' = databasenode = { combattracker.list.id-00001.effects.id-00002.isgmonly }, s'label' = databasenode = { combattracker.list.id-00001.effects.id-00002.label }, s'duration' = databasenode = { combattracker.list.id-00001.effects.id-00002.duration } }
-Runtime Notice: s'sLabel: ' | s'glitch:2' | s'nValue: ' | s'2'
-Runtime Notice: s'nodeActorEffects: ' | { s'source_name' = databasenode = { combattracker.list.id-00001.effects.id-00001.source_name }, s'init' = databasenode = { combattracker.list.id-00001.effects.id-00001.init }, s'isactive' = databasenode = { combattracker.list.id-00001.effects.id-00001.isactive }, s'isgmonly' = databasenode = { combattracker.list.id-00001.effects.id-00001.isgmonly }, s'label' = databasenode = { combattracker.list.id-00001.effects.id-00001.label }, s'duration' = databasenode = { combattracker.list.id-00001.effects.id-00001.duration } }
-Runtime Notice: s'sLabel: ' | s'explode:6' | s'nValue: ' | s'6'
-Runtime Notice: s'End performAction() aRoll: ' | { s'aDice' = { #1 = s'd6' }, s'nMod' = #0, s'sType' = s'sr6w', s'sDiceSides' = s'd6', s'sDesc' = s'' }
-Runtime Notice: s'*** onLanded(rSource, rTarget, rRoll) ***'
-Runtime Notice: s'rSource: ' | { s'sType' = s'pc', s'sCreatureNode' = s'charsheet.id-00001', s'sCTNode' = s'combattracker.list.id-00001', s'sName' = s'Bob the Dob' }
-Runtime Notice: s'rTarget: ' | nil
-Runtime Notice: s'rRoll: ' | { s'aDice' = { #1 = { s'result' = #1, s'type' = s'd6' } }, s'nMod' = #0, s'sType' = s'sr6w', s'bSecret' = bFALSE, s'sDiceSides' = s'd6', s'sDesc' = s'' }
-Runtime Notice: s'Final rRoll: ' | { s'aDice' = { #1 = { s'result' = #1, s'type' = s'd6' } }, s'nMod' = #0, s'sType' = s'sr6w', s'bSecret' = bFALSE, s'sDiceSides' = s'd6', s'sDesc' = s'' }
-Runtime Notice: s'*** getDiceResults(rRoll) ***'
-Runtime Notice: s'rRoll: ' | { s'aDice' = { #1 = { s'result' = #1, s'type' = s'd6' } }, s'nMod' = #0, s'sType' = s'sr6w', s'bSecret' = bFALSE, s'sDiceSides' = s'd6', s'sDesc' = s'' }
-Runtime Notice: s'aDice: ' | { s'result' = #1, s'type' = s'd6' }
-Runtime Notice: s'nResult: ' | #1 | s'sType: ' | s'd6'
-Runtime Notice: s'aContainer.nMyTotal: ' | #0
-Runtime Notice: s'Where is the problem: nCrits: ' | #0 | s'nDiceCount: ' | #1
-Runtime Notice: s'End getDiceResults() aContainer: ' | { s'bCritGlitch' = bFALSE, s'nDiceTotalValue' = #0, s'bGlitch' = bFALSE, s'nGlitchValue' = #2, s'nExplodeValue' = #6 }
-Runtime Notice: s'after getDiceResults() rRoll: ' | { s'aDice' = { #1 = { s'result' = #1, s'type' = s'd6' } }, s'nMod' = #0, s'sType' = s'sr6w', s'bSecret' = bFALSE, s'sDiceSides' = s'd6', s'sDesc' = s'' }
-Runtime Notice: { s'aDice' = { #1 = { s'result' = #1, s'type' = s'd6' } }, s'nMod' = #0, s'sType' = s'sr6w', s'bSecret' = bFALSE, s'sDiceSides' = s'd6', s'sDesc' = s'' }
-Runtime Notice: s'*** createChatMessage(rSource, rRoll) ***'
-Runtime Notice: s'aMessage: ' | { s'sender' = s'Bob the Dob', s'text' = s'', s'secret' = bTRUE, s'font' = s'systemfont', s'dicedisplay' = #1, s'diemodifier' = #0, s'dice' = { #1 = { s'result' = #1, s'type' = s'd6' } }, s'icon' = s'portrait_gm_token', s'type' = s'sr6w' }
-Runtime Notice: s'Create Crit Message: ' | { s'bCritGlitch' = bFALSE, s'nDiceTotalValue' = #0, s'bGlitch' = bFALSE, s'nGlitchValue' = #2, s'nExplodeValue' = #6 }
+[9/13/2020 1:20:35 PM] FGU: v4.0.0 ULTIMATE (2020-09-03)
+[9/13/2020 1:20:35 PM] OS: Windows 10  (10.0.0) 64bit
+[9/13/2020 1:20:35 PM] GRAPHICS: NVIDIA GeForce GTX 1050 Ti : 4018
+[9/13/2020 1:20:35 PM] USER: Frostbyte000jm
+[9/13/2020 1:20:35 PM] Launcher scene starting.
+[9/13/2020 1:20:41 PM] Daily session backup created.
+[9/13/2020 1:20:41 PM] Starting cloud server mode. [Frostbyte000jm]
+[9/13/2020 1:20:44 PM] Game server started. [2604:a880:800:14::7:5000:58532]
+[9/13/2020 1:20:44 PM] Launcher scene exiting.
+[9/13/2020 1:20:44 PM] Match successfully created on lobby.
+[9/13/2020 1:20:44 PM] Tabletop scene starting.
+[9/13/2020 1:20:44 PM] NETWORK STATUS: [Server] [Connected]
+  [Server Type - CLOUD - PUBLIC]
+[9/13/2020 1:20:55 PM] [<color="red">ERROR</color>]  Unable to locate ruleset file. [MoreCore] [common\template_lists.xml]
+[9/13/2020 1:20:56 PM] MEASURE: RULESETS LOAD - 11.2534045 - MoreCore
+[9/13/2020 1:20:56 PM] MEASURE: EXTENSIONS LOAD - 0.0169815 - 1
+[9/13/2020 1:20:56 PM] MEASURE: MODULE LIST BUILD - 0.3319734 - 26
+[9/13/2020 1:20:56 PM] MEASURE: REFRESH IMAGE ASSETS - 0.0469861
+[9/13/2020 1:20:56 PM] MEASURE: REFRESH PORTRAIT ASSETS - 0.0079956
+[9/13/2020 1:20:56 PM] MEASURE: REFRESH TOKEN ASSETS - 0.0579936
+[9/13/2020 1:20:56 PM] MEASURE: ASSET LIST BUILD - 0.113975
+[9/13/2020 1:20:57 PM] MEASURE: LOAD - PART 1 - 12.5261782
+[9/13/2020 1:20:57 PM] Loaded FreeType library version 2.10.2
+[9/13/2020 1:20:57 PM] s'aMajor: ' | { s'CoreRPG' = #4, s'MoreCore' = #1 } | s' aMinor: ' | { s'CoreRPG' = #0, s'MoreCore' = #58 }
+[9/13/2020 1:20:57 PM] s'onInit: registerResultHandler'
+[9/13/2020 1:20:58 PM] RULESET: MoreCore Ruleset (Version 1.59 2020630). This generic ruleset adds features and flexibility allowing you to play more game systems. 
+This ruleset coded by damned and ianmward. Additional thanks to superteddy57, celestian, Trenloe, mcortez, kelrugem, Moon Wizard and others for their assistance along the way. This incorporates dice rolling extensions from Ikael, DMFirmy, Frostbyte, Sibelius, Trenloe, Imiri, Myrddin, rstrahan, ahoggya, superteddy57, mcortez, David Stitt, thwright, trobadork, SmileyMan, rpotor, opilio, Brotherkelly, Old Scouser Roleplaying, damned and ianmward.
+DicePool and much other goodness by ianmward.
+Roll Parameters by mcortez.
+Click link for User Guide
+[9/13/2020 1:20:58 PM] RULESET: Help grow MoreCore. If you would like to support MoreCore you can do so in the following ways:
+* Use MoreCore and spread the word about the systems you are playing
+* Use MoreCore and upload and share Character sheets (and even campaigns) and instructions for the systems you are playing
+* Creating new Rolls for MoreCore and allowing them to be included into MoreCore
+* Creating new Theme Extensions for MoreCore and sharing them on the forums
+* If you would like to make a donation to help feed my RPG habit you can donate at PayPal.me/fgdamned
+[9/13/2020 1:20:58 PM] RULESET: Type /morecorehelp to access the MoreCore User Manual in game.  Rolls should be added to the PC and NPC sheets and not used in Chat. (LINK)
+[9/13/2020 1:20:58 PM] RULESET: Visit (LINK) for the best online RPG convention. Every year in April and October.
+[9/13/2020 1:20:58 PM] RULESET: The Dice Pool is turned off by default in new MoreCore campaigns. It can be turned on in Options.
+[9/13/2020 1:20:58 PM] RULESET: CoreRPG ruleset v3.3.11B for Fantasy Grounds
+Copyright 2019 Smiteworks USA, LLC
+[9/13/2020 1:20:58 PM] EXTENSION: Shadow Run 6W for MoreCore | v: 0.0.1 | by: Frostbyte
+[9/13/2020 1:20:58 PM] MEASURE: LOAD - PART 2 - 1.2259746
+[9/13/2020 1:21:19 PM] [WARNING]  window: Anchored static height ignored for control (pcclasslink) in windowclass (charsheet)
+[9/13/2020 1:21:19 PM] [WARNING]  window: Anchored static height ignored for control (pcclasslink) in windowclass (charsheet)
+[9/13/2020 1:21:43 PM] s'*** performAction() ***'
+[9/13/2020 1:21:43 PM] s'draginfo: ' | nil | s' rActor: ' | { s'sType' = s'pc', s'sCreatureNode' = s'charsheet.id-00001', s'sCTNode' = s'combattracker.list.id-00001', s'sName' = s'Bob the Dob' } | s' sParams:' | s'1h0 Roll'
+[9/13/2020 1:21:43 PM] s'onInit() aContainer: ' | { s'bCritGlitch' = bFALSE, s'nDiceTotalValue' = #0, s'bRollin' = bTRUE, s'bGlitch' = bFALSE, s'bAddGlitchEffectFailed' = bFALSE, s'nGlitchValue' = #1, s'nExplodeValue' = #0 }
+[9/13/2020 1:21:43 PM] s'nDiceNum: ' | #1
+[9/13/2020 1:21:43 PM] s'sStackDesc: ' | s''
+[9/13/2020 1:21:43 PM] s'objProp: ' | {  }
+[9/13/2020 1:21:43 PM] s'aModStackDescriptions: ' | {  } | s' nStackMod: ' | #0
+[9/13/2020 1:21:43 PM] s'nodeActorEffects: ' | { s'init' = databasenode = { combattracker.list.id-00001.effects.id-00002.init }, s'isactive' = databasenode = { combattracker.list.id-00001.effects.id-00002.isactive }, s'isgmonly' = databasenode = { combattracker.list.id-00001.effects.id-00002.isgmonly }, s'label' = databasenode = { combattracker.list.id-00001.effects.id-00002.label }, s'duration' = databasenode = { combattracker.list.id-00001.effects.id-00002.duration } }
+[9/13/2020 1:21:43 PM] s'sLabel: ' | s'explode:3' | s'nValue: ' | s'3'
+[9/13/2020 1:21:43 PM] s'nodeActorEffects: ' | { s'init' = databasenode = { combattracker.list.id-00001.effects.id-00001.init }, s'isactive' = databasenode = { combattracker.list.id-00001.effects.id-00001.isactive }, s'isgmonly' = databasenode = { combattracker.list.id-00001.effects.id-00001.isgmonly }, s'label' = databasenode = { combattracker.list.id-00001.effects.id-00001.label }, s'duration' = databasenode = { combattracker.list.id-00001.effects.id-00001.duration } }
+[9/13/2020 1:21:43 PM] s'End performAction() aRoll: ' | { s'aDice' = { #1 = s'd6' }, s'nMod' = #0, s'sType' = s'sr6w', s'sDiceSides' = s'd6', s'sDesc' = s'' }
+[9/13/2020 1:21:44 PM] s'*** onLanded(rSource, rTarget, rRoll) ***'
+[9/13/2020 1:21:44 PM] s'rSource: ' | { s'sType' = s'pc', s'sCreatureNode' = s'charsheet.id-00001', s'sCTNode' = s'combattracker.list.id-00001', s'sName' = s'Bob the Dob' }
+[9/13/2020 1:21:44 PM] s'rTarget: ' | nil
+[9/13/2020 1:21:44 PM] s'rRoll: ' | { s'aDice' = { #1 = { s'value' = #2, s'type' = s'd6', s'result' = #2 }, s'expr' = s'd6' }, s'nMod' = #0, s'sType' = s'sr6w', s'bSecret' = bFALSE, s'sDiceSides' = s'd6', s'sDesc' = s'' }
+[9/13/2020 1:21:44 PM] [<color="red">ERROR</color>]  Script execution error: [string "scripts/manager_custom_blankDice_sr6w.lua"]:187: attempt to compare number with nil
+[9/13/2020 1:23:43 PM] Reloading ruleset and data
+[9/13/2020 1:23:44 PM] Tabletop scene exiting.
+[9/13/2020 1:23:44 PM] Tabletop scene starting.
+[9/13/2020 1:23:44 PM] NETWORK STATUS: [Server] [Connected]
+  [Server Type - CLOUD - PUBLIC]
+[9/13/2020 1:23:53 PM] [<color="red">ERROR</color>]  Unable to locate ruleset file. [MoreCore] [common\template_lists.xml]
+[9/13/2020 1:23:54 PM] MEASURE: RULESETS LOAD - 10.1027456 - MoreCore
+[9/13/2020 1:23:54 PM] MEASURE: EXTENSIONS LOAD - 0.0039989 - 1
+[9/13/2020 1:23:54 PM] MEASURE: MODULE LIST BUILD - 0.2709235 - 26
+[9/13/2020 1:23:54 PM] MEASURE: REFRESH IMAGE ASSETS - 0.0429863
+[9/13/2020 1:23:54 PM] MEASURE: REFRESH PORTRAIT ASSETS - 0.0029987
+[9/13/2020 1:23:54 PM] MEASURE: REFRESH TOKEN ASSETS - 0.0629842
+[9/13/2020 1:23:54 PM] MEASURE: ASSET LIST BUILD - 0.1099691
+[9/13/2020 1:23:55 PM] MEASURE: LOAD - PART 1 - 11.258371
+[9/13/2020 1:23:55 PM] Loaded FreeType library version 2.10.2
+[9/13/2020 1:23:55 PM] s'aMajor: ' | { s'CoreRPG' = #4, s'MoreCore' = #1 } | s' aMinor: ' | { s'CoreRPG' = #0, s'MoreCore' = #58 }
+[9/13/2020 1:23:55 PM] s'onInit: registerResultHandler'
+[9/13/2020 1:23:56 PM] RULESET: MoreCore Ruleset (Version 1.59 2020630). This generic ruleset adds features and flexibility allowing you to play more game systems. 
+This ruleset coded by damned and ianmward. Additional thanks to superteddy57, celestian, Trenloe, mcortez, kelrugem, Moon Wizard and others for their assistance along the way. This incorporates dice rolling extensions from Ikael, DMFirmy, Frostbyte, Sibelius, Trenloe, Imiri, Myrddin, rstrahan, ahoggya, superteddy57, mcortez, David Stitt, thwright, trobadork, SmileyMan, rpotor, opilio, Brotherkelly, Old Scouser Roleplaying, damned and ianmward.
+DicePool and much other goodness by ianmward.
+Roll Parameters by mcortez.
+Click link for User Guide
+[9/13/2020 1:23:56 PM] RULESET: Help grow MoreCore. If you would like to support MoreCore you can do so in the following ways:
+* Use MoreCore and spread the word about the systems you are playing
+* Use MoreCore and upload and share Character sheets (and even campaigns) and instructions for the systems you are playing
+* Creating new Rolls for MoreCore and allowing them to be included into MoreCore
+* Creating new Theme Extensions for MoreCore and sharing them on the forums
+* If you would like to make a donation to help feed my RPG habit you can donate at PayPal.me/fgdamned
+[9/13/2020 1:23:56 PM] RULESET: Type /morecorehelp to access the MoreCore User Manual in game.  Rolls should be added to the PC and NPC sheets and not used in Chat. (LINK)
+[9/13/2020 1:23:56 PM] RULESET: Visit (LINK) for the best online RPG convention. Every year in April and October.
+[9/13/2020 1:23:56 PM] RULESET: The Dice Pool is turned off by default in new MoreCore campaigns. It can be turned on in Options.
+[9/13/2020 1:23:56 PM] RULESET: CoreRPG ruleset v3.3.11B for Fantasy Grounds
+Copyright 2019 Smiteworks USA, LLC
+[9/13/2020 1:23:56 PM] EXTENSION: Shadow Run 6W for MoreCore | v: 0.0.1 | by: Frostbyte
+[9/13/2020 1:23:56 PM] MEASURE: LOAD - PART 2 - 0.9999349
+[9/13/2020 1:24:17 PM] [WARNING]  window: Anchored static height ignored for control (pcclasslink) in windowclass (charsheet)
+[9/13/2020 1:24:17 PM] [WARNING]  window: Anchored static height ignored for control (pcclasslink) in windowclass (charsheet)
+[9/13/2020 1:24:19 PM] s'*** performAction() ***'
+[9/13/2020 1:24:19 PM] s'draginfo: ' | nil | s' rActor: ' | { s'sType' = s'pc', s'sCreatureNode' = s'charsheet.id-00001', s'sCTNode' = s'combattracker.list.id-00001', s'sName' = s'Bob the Dob' } | s' sParams:' | s'1h0 Roll'
+[9/13/2020 1:24:19 PM] s'onInit() aContainer: ' | { s'bCritGlitch' = bFALSE, s'nDiceTotalValue' = #0, s'bRollin' = bTRUE, s'bGlitch' = bFALSE, s'bAddGlitchEffectFailed' = bFALSE, s'nGlitchValue' = #1, s'nExplodeValue' = #0 }
+[9/13/2020 1:24:19 PM] s'nDiceNum: ' | #1
+[9/13/2020 1:24:19 PM] s'sStackDesc: ' | s''
+[9/13/2020 1:24:19 PM] s'objProp: ' | {  }
+[9/13/2020 1:24:19 PM] s'aModStackDescriptions: ' | {  } | s' nStackMod: ' | #0
+[9/13/2020 1:24:19 PM] s'nodeActorEffects: ' | { s'init' = databasenode = { combattracker.list.id-00001.effects.id-00002.init }, s'isactive' = databasenode = { combattracker.list.id-00001.effects.id-00002.isactive }, s'isgmonly' = databasenode = { combattracker.list.id-00001.effects.id-00002.isgmonly }, s'label' = databasenode = { combattracker.list.id-00001.effects.id-00002.label }, s'duration' = databasenode = { combattracker.list.id-00001.effects.id-00002.duration } }
+[9/13/2020 1:24:19 PM] s'sLabel: ' | s'explode:3' | s'nValue: ' | s'3'
+[9/13/2020 1:24:19 PM] s'nodeActorEffects: ' | { s'init' = databasenode = { combattracker.list.id-00001.effects.id-00001.init }, s'isactive' = databasenode = { combattracker.list.id-00001.effects.id-00001.isactive }, s'isgmonly' = databasenode = { combattracker.list.id-00001.effects.id-00001.isgmonly }, s'label' = databasenode = { combattracker.list.id-00001.effects.id-00001.label }, s'duration' = databasenode = { combattracker.list.id-00001.effects.id-00001.duration } }
+[9/13/2020 1:24:19 PM] s'End performAction() aRoll: ' | { s'aDice' = { #1 = s'd6' }, s'nMod' = #0, s'sType' = s'sr6w', s'sDiceSides' = s'd6', s'sDesc' = s'' }
+[9/13/2020 1:24:19 PM] s'End performAction() aContainer: ' | {
+    s'bCritGlitch' = bFALSE,
+    s'nDiceTotalValue' = #0,
+    s'bRollin' = bTRUE,
+    s'bGlitch' = bFALSE,
+    s'bAddGlitchEffectFailed' = bFALSE,
+    s'nGlitchValue' = #1, s'nExplodeValue' = #3 }
+[9/13/2020 1:24:21 PM] s'*** onLanded(rSource, rTarget, rRoll) ***'
+[9/13/2020 1:24:21 PM] s'rSource: ' | { s'sType' = s'pc', s'sCreatureNode' = s'charsheet.id-00001', s'sCTNode' = s'combattracker.list.id-00001', s'sName' = s'Bob the Dob' }
+[9/13/2020 1:24:21 PM] s'rTarget: ' | nil
+[9/13/2020 1:24:21 PM]
+s'rRoll: ' | {
+    s'aDice' = {
+        #1 = {
+            s'value' = #1,
+            s'type' = s'd6',
+            s'result' = #1 }, s'expr' = s'd6' }, s'nMod' = #0, s'sType' = s'sr6w', s'bSecret' = bFALSE, s'sDiceSides' = s'd6', s'sDesc' = s'' }
+[9/13/2020 1:24:21 PM] s'aContainer: ' | {
+    s'bCritGlitch' = bFALSE,
+    s'nDiceTotalValue' = #0,
+    s'bRollin' = bTRUE,
+    s'bGlitch' = bFALSE,
+    s'bAddGlitchEffectFailed' = bFALSE,
+    s'nGlitchValue' = #1,
+    s'nExplodeValue' = #3 }
+[9/13/2020 1:24:21 PM] [<color="red">ERROR</color>]  Script execution error: [string "scripts/manager_custom_blankDice_sr6w.lua"]:189: attempt to compare number with nil

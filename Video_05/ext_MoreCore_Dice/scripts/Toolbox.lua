@@ -1,6 +1,6 @@
 ---
 --- Template by Frostbyte
---- Created by james.
+--- Created by James Martin.
 --- DateTime: 8/29/2020 5:42 PM
 ---
 
@@ -56,7 +56,7 @@ function onInit() --- Just housing everything in onInit(). Do not use this file.
         Debug.console("sMod_Desc: ",sMod_Desc,"nMod_Value: ",nMod_Value);
         bonusDice = bonusDice + nMod_Value;
     end
-
+        -- Build Dice Pool
     for i = 1, bonusDice do
         table.insert(aRoll.aDice, aRoll.sDiceSides);
     end
@@ -143,6 +143,9 @@ function onInit() --- Just housing everything in onInit(). Do not use this file.
         -- Load current roll into Prior roll and if any explode add dice to aRoll.
         for _, aDice in pairs(rRoll.aDice) do
             local nResult = aDice.result;
+            if nResult == nil then
+                break;
+            end
 
             -- load last roll into aPriorRoll
             table.insert(aPriorRoll.aDice, aDice);

@@ -50,6 +50,12 @@ function performAction(draginfo, rActor, sParams)
     Debug.console("*** performAction() ***");
     Debug.console("draginfo: ",draginfo, " rActor: ", rActor, " sParams:", sParams);
 
+    -- Error Check / Help Message
+    if(sParams == "" or sParams == "help") then
+        createHelpMessage();
+        return;
+    end
+
     -- This is to fix a bug where someone accidentally spams the die rolling.
     if aContainer.bRollin then
         return;
@@ -72,10 +78,7 @@ function performAction(draginfo, rActor, sParams)
     --- Choose a Dice parser from Tool Box
 
 
-    -- Error Check / Help Message
-    if(sParams == "" or sParams == "help") then
-        createHelpMessage();
-    end
+
     -- Verify the data is correct
     Debug.console("End performAction() aRoll: ", aRoll);
     ActionsManager.performAction(draginfo, rActor, aRoll);
