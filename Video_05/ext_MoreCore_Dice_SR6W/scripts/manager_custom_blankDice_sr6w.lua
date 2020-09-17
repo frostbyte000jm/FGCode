@@ -41,7 +41,10 @@ function createHelpMessage()
             "*** Additional Notes ***\n"..
             "This dice system uses the ModStack to count number of dice.\n"..
             "Add Attributes, Skills, and other Mods as '/mod (p1)', then create a roll of '/sr6w (p1)h(p2)"..
-            "this will be the final click to roll dice.";
+            "this will be the final click to roll dice.\n\n"..
+
+            "This dice mod was meant to be rolled from a PC or NPC Character Sheet. Explode:6 and Glitch:2 will "..
+            "not work from other locations.";
     Comm.deliverChatMessage(rMessage);
 end
 
@@ -54,7 +57,6 @@ function performAction(draginfo, rActor, sParams)
 
     -- Error Check / Help Message
     if(sParams == "" or sParams == "help") then
-        Debug.console("Error Check: ", sParams);
         createHelpMessage();
         return;
     end
@@ -69,6 +71,7 @@ function performAction(draginfo, rActor, sParams)
     aContainer.bRollin = true;      -- This is to fix a bug where someone spams the die rolling.
     aContainer.nDiceTotalValue = 0;
     aContainer.nCapHits = nil;
+    aContainer.bMissingNode = false;
     aContainer.nExplodeValue = 0;
     aContainer.nGlitchValue = 1;
     aContainer.bCritGlitch = false;
@@ -135,26 +138,28 @@ function performAction(draginfo, rActor, sParams)
     end
 
     -- Pull data from Effects
-    local nodeActorCombatTracker = DB.findNode(rActor.sCTNode);         -- Combat Tracker Actor Node
-    local nCount = 0;
-    for _,nodeActorEffects in pairs(nodeActorCombatTracker.getChild("effects").getChildren()) do
-        Debug.console("nodeActorEffects: ",nodeActorEffects.getChildren());
-        local sLabel = nodeActorEffects.getChild("label").getValue();
-        if string.match(sLabel,"explode:") then                     --- Update KeyWord
+    if rActor and rActor.sCTNode then
+        local nodeActorCombatTracker = DB.findNode(rActor.sCTNode);         -- Combat Tracker Actor Node
+        local nCount = 0;
+        for _,nodeActorEffects in pairs(nodeActorCombatTracker.getChild("effects").getChildren()) do
+            Debug.console("nodeActorEffects: ",nodeActorEffects.getChildren());
+            local sLabel = nodeActorEffects.getChild("label").getValue();
+            if string.match(sLabel,"explode:") then                     --- Update KeyWord
             local _,sValue = string.match(sLabel,"[:](%s*)(%d+)");
-            Debug.console("sLabel: ",sLabel,"nValue: ",sValue);
-            aContainer.nExplodeValue = tonumber(sValue);
-            DB.deleteNode(nodeActorEffects);
-        elseif string.match(sLabel,"glitch:") then
-            local _,sValue = string.match(sLabel,"[:](%s*)(%d+)");
-            Debug.console("sLabel: ",sLabel,"nValue: ",sValue);
-            aContainer.nGlitchValue = tonumber(sValue);
-            DB.deleteNode(nodeActorEffects);
+                Debug.console("sLabel: ",sLabel,"nValue: ",sValue);
+                aContainer.nExplodeValue = tonumber(sValue);
+                DB.deleteNode(nodeActorEffects);
+            elseif string.match(sLabel,"glitch:") then
+                local _,sValue = string.match(sLabel,"[:](%s*)(%d+)");
+                Debug.console("sLabel: ",sLabel,"nValue: ",sValue);
+                aContainer.nGlitchValue = tonumber(sValue);
+                DB.deleteNode(nodeActorEffects);
+            end
+            nCount = nCount + 1;
         end
-        nCount = nCount + 1;
+    else
+        aContainer.bMissingNode = true;
     end
-
-
 
     -- Verify the data is correct
     Debug.console("End performAction() aRoll: ", aRoll);
@@ -221,21 +226,24 @@ function onLanded(rSource, rTarget, rRoll)
     rRoll = getDiceResults(rRoll);
     Debug.console("after getDiceResults() rRoll: ",rRoll);
 
-    if aContainer.bGlitch or aContainer.bCritGlitch then  --- Set Condition to add effect
-    local nodeActorCombatTracker = DB.findNode(rSource.sCTNode);         -- Combat Tracker Actor Node
-        local nodeActorEffect = nodeActorCombatTracker.getChild("effects").createChild();
-        Debug.console("nodeActorEffect: ",nodeActorEffect.getChildren());
-        if nodeActorEffect.getChild("label") then
-            if aContainer.bGlitch then
-                nodeActorEffect.getChild("label").setValue("Glitch Alert!!!");
-            elseif aContainer.bCritGlitch then
-                nodeActorEffect.getChild("label").setValue("Crit Glitch Alert!!!");
+    if rSource and rSource.sCTNode then
+        if aContainer.bGlitch or aContainer.bCritGlitch then  --- Set Condition to add effect
+        local nodeActorCombatTracker = DB.findNode(rSource.sCTNode);         -- Combat Tracker Actor Node
+            local nodeActorEffect = nodeActorCombatTracker.getChild("effects").createChild();
+            Debug.console("nodeActorEffect: ",nodeActorEffect.getChildren());
+            if nodeActorEffect.getChild("label") then
+                if aContainer.bGlitch then
+                    nodeActorEffect.getChild("label").setValue("Glitch Alert!!!");
+                elseif aContainer.bCritGlitch then
+                    nodeActorEffect.getChild("label").setValue("Crit Glitch Alert!!!");
+                end
+            else
+                DB.deleteNode(nodeActorEffect);
+                aContainer.bAddGlitchEffectFailed = true;
             end
-        else
-            DB.deleteNode(nodeActorEffect);
-            aContainer.bAddGlitchEffectFailed = true;
         end
     end
+
 
     -- generate chat window message. (If you want default, leave this alone).
     local aMessage = createChatMessage(rSource, rRoll);
@@ -300,6 +308,7 @@ function createChatMessage(rSource, rRoll)
 
     local sCapText = "";
     local sGlitchText = "";
+    local sMissingNodeText = "";
     if aContainer.nCapHits then
         sCapText = "Damage Cap: "..aContainer.nCapHits.."\n";
     end
@@ -316,9 +325,14 @@ function createChatMessage(rSource, rRoll)
         "Please open Combat Tacker and add Effect.";
     end
 
+    if aContainer.bMissingNode then
+        sMissingNodeText = "\nPlease roll from a character sheet. See '/sr6w help' for more info."
+    end
+
     aMessage.text = aMessage.text.."\n\n "..
     sCapText..
-    sGlitchText;
+    sGlitchText..
+    sMissingNodeText;
 
 
     --- To change the total display untoggle "aMessage.dicedisplay"
